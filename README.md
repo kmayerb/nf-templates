@@ -13,7 +13,7 @@ Some favorite NextFlow templates from scratch.
 
 Run many jobs and collect the result into pre-defined groups. See [`archive_by_group.nf`](https://github.com/kmayerb/nf-templates/blob/main/collect_groups_of_files/archive_by_group.nf)
 
-https://github.com/kmayerb/nf-templates/blob/main/collect_groups_of_files/collect_by_group.nf
+
 ### Objecive
 
 Suppose you have two groups, one with 2 files and one with 3 files.  
@@ -65,7 +65,7 @@ b3,b,inputs/b3.txt
 
 ### Workflow
 
-For details see the [archive_by_group.nf](https://github.com/kmayerb/nf-templates/blob/main/collect_groups_of_files/archive_by_group.nf)
+For details see the [`archive_by_group.nf`](https://github.com/kmayerb/nf-templates/blob/main/collect_groups_of_files/archive_by_group.nf)
 
 ```bash
 19:26 $ NXF_VER=20.07.1 nextflow run archive_by_group.nf -c local.config
@@ -79,7 +79,7 @@ executor >  local (7)
 ## `collect_by_group.nf`
 
 
-For details see the [collect_by_group.nf](https://github.com/kmayerb/nf-templates/blob/main/collect_groups_of_files/collect_by_group.nf)
+For details see the [`collect_by_group.nf`](https://github.com/kmayerb/nf-templates/blob/main/collect_groups_of_files/collect_by_group.nf)
 
 A variation on the theme, rather than archiving the group based collections may be passed to
 another process with sorting based on name.

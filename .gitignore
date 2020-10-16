@@ -1,0 +1,6 @@
+.DS_Store
+.nextflow/
+collect_groups_of_files/.DS_Store
+collect_groups_of_files/bin/.DS_Store
+collect_groups_of_files/outputs/.DS_Store
+.gitignore

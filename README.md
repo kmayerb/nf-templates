@@ -65,7 +65,27 @@ b3,b,inputs/b3.txt
 
 ### Workflow
 
-For details see the [`archive_by_group.nf`](https://github.com/kmayerb/nf-templates/blob/main/collect_groups_of_files/archive_by_group.nf)
+For full details see the [`archive_by_group.nf`](https://github.com/kmayerb/nf-templates/blob/main/collect_groups_of_files/archive_by_group.nf)
+
+
+
+### Ghist of the Solution
+
+The solution is to put tuples into the output channel. 
+
+```groovy
+output: 
+	tuple val(group), file("${filename}.lowercase.tsv") into output_channel
+
+```
+
+And then in recieving process recieve not one by a list of files `file_list`
+
+```groovy 
+set val(group), file_list from output_channel.groupTuple()
+```
+
+
 
 ```bash
 19:26 $ NXF_VER=20.07.1 nextflow run archive_by_group.nf -c local.config

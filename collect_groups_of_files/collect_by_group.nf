@@ -52,7 +52,7 @@ process combine_files_by_group {
     errorStrategy 'finish'
     
     input: 
-        set val(group), val(name), file_list from output_channel.groupTuple(sort: { it[1]} )
+        set val(group), val(name), file(file_list) from output_channel.groupTuple(sort: { it[1]} )
     
     output: 
        file("${group}.tsv") into final_output_channel

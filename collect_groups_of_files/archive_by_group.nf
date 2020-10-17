@@ -50,7 +50,7 @@ process tar_files_by_group {
     errorStrategy 'finish'
     
     input: 
-        set val(group), file_list from output_channel.groupTuple()
+        set val(group), file(file_list) from output_channel.groupTuple()
     
     output: 
        file("${group}.tar.gz") into final_output_channel
